@@ -1,2 +1,7 @@
-# ImgToAscii
-Turn a .png to ascii art
+Simple script to convert .png files into ascii art
+
+Place pngs into \images\
+
+Run script
+
+Check \output\ for results
