@@ -48,10 +48,10 @@ def get_closest_color(input_rgb):
     closest_dist = sys.maxsize 
 
     for rgb_color in Colors.COLORS_RGB.values():
-        dist = math.sqrt(abs((rgb_color[0]-input_rgb[0]) + (rgb_color[1]-input_rgb[1]) + (rgb_color[2]-input_rgb[2])))
+        dist = math.sqrt( abs( pow(((rgb_color[0]-input_rgb[0]) * .3),2) + pow(((rgb_color[1]-input_rgb[1]) * .25),2) + pow(((rgb_color[2]-input_rgb[2]) * .3),2)))
         
         if dist < closest_dist:
             closest_dist = dist
             closest_color = rgb_color
     # TW: bad code  | Creates a list of keys and goes to the index of closest_color in a list of values
-    return (list(Colors.COLORS_RGB.keys())[list(Colors.COLORS_RGB.values()).index(closest_color)])
+    return Colors.COLORS.get((list(Colors.COLORS_RGB.keys())[list(Colors.COLORS_RGB.values()).index(closest_color)]))
