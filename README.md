@@ -8,3 +8,4 @@ image = Image.open('emoji.jpg').resize((255,128))
 ascii_obj = ASCII_Image(image)
 ascii_obj.print_ascii()
 ```
+![alt text](https://i.ibb.co/BwBhWsg/nerd.png "Nerd Emoji")
