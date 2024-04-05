@@ -61,5 +61,5 @@ def get_closest_color(input_rgb):
         if dist < closest_dist:
             closest_dist = dist
             closest_color = rgb_color
-    # TW: bad code  | Creates a list of keys and goes to the index of closest_color in a list of values
+    # TW: bad code  | grabs ANSI code
     return Colors.COLORS.get((list(Colors.COLORS_RGB.keys())[list(Colors.COLORS_RGB.values()).index(closest_color)]))
