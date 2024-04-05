@@ -3,7 +3,7 @@ Simple script to convert image files into ANSI Colored ASCII art
 
 Not all image encoding is currently supported but most popular formats of png, jpg, or webp work.
 
-Example code:
+## Example code:
 ```python
 Import Colors, ASCII_Image
 from PIL import Image
