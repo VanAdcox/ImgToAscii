@@ -1,4 +1,4 @@
-import math,sys
+import math,sys, numpy as np
 class Colors:
     COLORS = {
         'BLACK' : '\033[30m',
@@ -48,7 +48,15 @@ def get_closest_color(input_rgb):
     closest_dist = sys.maxsize 
 
     for rgb_color in Colors.COLORS_RGB.values():
-        dist = math.sqrt( abs( pow(((rgb_color[0]-input_rgb[0]) * .3),2) + pow(((rgb_color[1]-input_rgb[1]) * .25),2) + pow(((rgb_color[2]-input_rgb[2]) * .3),2)))
+
+        if isinstance(input_rgb[0], np.ndarray):
+            input_rgb = tuple(input_rgb[i].tolist() for i in range(3))
+
+
+        # Calculate the Euclidean distance
+        dist = math.sqrt((rgb_color[0] - input_rgb[0]) ** 2 * 0.3 +
+                         (rgb_color[1] - input_rgb[1]) ** 2 * 0.25 +
+                         (rgb_color[2] - input_rgb[2]) ** 2 * 0.3)
         
         if dist < closest_dist:
             closest_dist = dist
