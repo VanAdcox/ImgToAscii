@@ -1,7 +1,19 @@
-Simple script to convert .png files into ascii art
+Simple script to convert image files into ANSI Colored ASCII art
+(Make sure your terminal supports ANSI Color!)
 
-Place pngs into \images\
+Not all image encoding is currently supported but most popular formats of png, jpg, or webp work.
 
-Run script
+## Example code:
+```python
+Import Colors, ASCII_Image
+from PIL import Image
 
-Check \output\ for results
+image = Image.open('emoji.jpg').resize((256,128))
+ascii_obj = ASCII_Image(image)
+ascii_obj.print_ascii()
+```
+# Input
+<img src="https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/nerd-face.png" width="250" height="250">
+
+# Output
+<img src="https://i.ibb.co/bvntvNs/nerd.png" width="250" height="250">
