@@ -1,6 +1,7 @@
 Simple script to convert image files into ANSI Colored ASCII art
+(Make sure your terminal supports ANSI Color!)
 
-example code:
+Example code:
 ```python
 Import Colors, ASCII_Image
 from PIL import Image
