@@ -5,7 +5,7 @@ example code:
 Import Colors, ASCII_Image
 from PIL import Image
 
-image = Image.open('emoji.jpg').resize((255,128))
+image = Image.open('emoji.jpg').resize((128,128))
 ascii_obj = ASCII_Image(image)
 ascii_obj.print_ascii()
 ```
